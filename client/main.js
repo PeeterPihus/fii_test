@@ -36,7 +36,8 @@ var myApp = angular.module('myApp', [
     'menuItem',
     'modalDemoCtrl',
     'angularTrix',
-    'ngSanitize'
+    'ngSanitize',
+    'slickCarousel'
 ]);
 
 myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -65,7 +66,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
       url:'/register',
       templateUrl: 'partials/register.html',
       controller: 'registerController',
-      access: {restricted: true}
+      access: {restricted: false}
     })
     .state('admin', {
         url: '/admin',
@@ -105,7 +106,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('admin.event', {
         url:'/event',
         templateUrl: 'partials/event.html',
-        access: {restricted:true},
+        access: {restricted:false},
         controller: "eventAdminCtrl"
     })
     .state('admin.bron', {
